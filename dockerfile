@@ -16,6 +16,7 @@ RUN pacman -Syu --noconfirm \
     python \
     uv \
     yazi \
+    base-devel \
     cmake
 
 CMD ["nvim"]

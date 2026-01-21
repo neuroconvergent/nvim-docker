@@ -15,6 +15,7 @@ RUN pacman -Syu --noconfirm \
     sqlite \
     python \
     uv \
-    yazi
+    yazi \
+    cmake
 
 CMD ["nvim"]

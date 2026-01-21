@@ -1,9 +1,20 @@
-FROM anatolelucet/neovim:latest
+FROM archlinux/archlinux:latest
 
-# copy your personal neovim config
-# COPY nvim /root/.config/nvim/
+RUN pacman -Syu --noconfirm \
+    neovim \
+    git \
+    ripgrep \
+    fd \
+    lua \
+    lua51 \
+    luarocks \
+    lsof \
+    npm \
+    yarn \
+    tree-sitter-cli \
+    sqlite \
+    python \
+    uv \
+    yazi
 
-# install your favorite tools!
-RUN apk add git ripgrep fd lua5.1 lsof npm tree-sitter-cli luarocks5.1 clang yarn uv
-
-CMD ["/usr/bin/nvim"]
+CMD ["nvim"]
